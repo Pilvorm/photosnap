@@ -1,0 +1,66 @@
+// ::-webkit-scrollbar {
+//   width: 12px;
+// }
+
+// ::-webkit-scrollbar-track {
+//   background: transparent;
+// }
+
+// ::-webkit-scrollbar-thumb {
+//   background-color: $blue-accent;
+//   border-radius: 8px;
+//   border: 4px solid transparent;
+//   background-clip: content-box;
+// }
+
+// ::selection {
+//   color: $blue-main;
+//   background: $blue-accent;
+// }
+
+// ::-moz-selection {
+//   color: $blue-main;
+//   background: $blue-accent;
+// }
+
+// .split * {
+//   will-change: transform;
+// }
+
+// body {
+//   background-color: $blue-main;
+//   color: $blue-accent;
+// }
+
+.feature-wrapper-left {
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+}
+.feature-wrapper-right {
+  display: grid;
+  grid-template-columns: 8fr 4fr;
+}
+
+.gradient-vertical {
+  background: linear-gradient(to top, #ffc593 0%, #bc7198 52%, #5a77ff 100%);
+  width: 6px;
+  height: 100%;
+}
+
+.stories-mountains {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 0.76) 100%
+    ),
+    url("/assets/stories/desktop/mountains.jpg");
+  background-size: cover; /* makes it behave like object-cover */
+  background-position: center; /* keeps it centered */
+  background-repeat: no-repeat;
+}
+
+.stories-divider {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.25);
+}

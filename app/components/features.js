@@ -9,7 +9,7 @@ const Features = ({}) => {
     <section className="">
       {/* First */}
       <div className="flex feature-wrapper-left h-[650px]">
-        <div className="py-18 aspect-square bg-black flex flex-col justify-center text-white">
+        <div className="py-18 lg:aspect-square bg-black flex flex-col justify-center text-white">
           <div className="feature-content-wrapper relative px-18">
             <div className="gradient-vertical absolute top-0 left-0"></div>
             <h2 className="text-[40px] tracking-[4px] leading-[48px] uppercase font-bold">
@@ -51,7 +51,7 @@ const Features = ({}) => {
             alt="Designing application on a laptop"
           />
         </div>
-        <div className="py-18 aspect-square flex flex-col justify-center">
+        <div className="py-18 lg:aspect-square flex flex-col justify-center">
           <div className="feature-content-wrapper relative px-18">
             <h2 className="text-[40px] tracking-[4px] leading-[48px] uppercase font-bold">
               Beautiful
@@ -74,7 +74,7 @@ const Features = ({}) => {
 
       {/* THIRD */}
       <div className="flex feature-wrapper-left h-[650px]">
-        <div className="py-18 aspect-square flex flex-col justify-center">
+        <div className="py-18 lg:aspect-square flex flex-col justify-center">
           <div className="feature-content-wrapper relative px-18">
             <h2 className="text-[40px] tracking-[4px] leading-[48px] uppercase font-bold">
               Designed

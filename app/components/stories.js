@@ -25,7 +25,7 @@ const storiesList = [
 
 const Stories = ({}) => {
   return (
-    <section className="mb-20 w-full grid md:grid-cols-2 lg:grid-cols-4">
+    <section className="w-full grid md:grid-cols-2 lg:grid-cols-4">
       {/* First */}
       {storiesList.map((story, idx) => (
         <div

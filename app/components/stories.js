@@ -30,7 +30,7 @@ const Stories = ({}) => {
       {storiesList.map((story, idx) => (
         <div
           key={story.title}
-          className="story md:h-[500px] lg:h-[650px] p-10 flex flex-col justify-end gap-3 text-white bg-cover bg-center"
+          className="story h-[375px] md:h-[500px] lg:h-[650px] p-10 flex flex-col justify-end gap-3 text-white bg-cover bg-center"
           style={{
             backgroundImage: `url(/assets/stories/desktop/${story.image}.jpg)`,
           }}

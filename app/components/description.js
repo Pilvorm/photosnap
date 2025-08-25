@@ -8,11 +8,13 @@ const Description = ({}) => {
   return (
     <section className="">
       {/* First */}
-      <div className="flex feature-wrapper-left h-[650px]">
-        <div className="py-18 lg:aspect-square bg-black flex flex-col justify-center text-white">
-          <div className="feature-content-wrapper relative px-18">
-            <div className="gradient-vertical absolute top-0 left-0"></div>
-            <h2 className="text-[40px] tracking-[4px] leading-[48px] uppercase font-bold">
+      <div className="flex feature-wrapper-left md:h-[650px]">
+        <div className="max-md:relative py-8 md:px-18 lg:aspect-square bg-black flex flex-col justify-center text-white">
+          <div className="feature-content-wrapper md:relative px-8 md:px-18">
+
+            <div className="gradient-vertical absolute top-0 left-8 md:left-0"></div>
+
+            <h2 className="text-[32px] md:text-[40px] tracking-[3.5px] leading-[48px] uppercase font-bold">
               Create and
               <br />
               Share Your
@@ -29,7 +31,7 @@ const Description = ({}) => {
             </Link>
           </div>
         </div>
-        <div className="w-full h-full relative">
+        <div className="w-full h-[295px] md:h-full relative">
           <Image
             src={Photographer}
             fill
@@ -41,8 +43,8 @@ const Description = ({}) => {
       </div>
 
       {/* SECOND */}
-      <div className="flex feature-wrapper-right h-[650px]">
-        <div className="w-full h-full relative">
+      <div className="flex feature-wrapper-right md:h-[650px]">
+        <div className="w-full h-[295px] md:h-full relative">
           <Image
             src={Laptop}
             fill
@@ -51,9 +53,9 @@ const Description = ({}) => {
             alt="Designing application on a laptop"
           />
         </div>
-        <div className="py-18 lg:aspect-square flex flex-col justify-center">
-          <div className="feature-content-wrapper relative px-18">
-            <h2 className="text-[40px] tracking-[4px] leading-[48px] uppercase font-bold">
+        <div className="py-8 md:px-18 lg:aspect-square flex flex-col justify-center">
+          <div className="feature-content-wrapper relative px-8 md:px-18">
+            <h2 className="text-[32px] md:text-[40px] tracking-[3.5px] leading-[48px] uppercase font-bold">
               Beautiful
               <br />
               Stories
@@ -73,10 +75,10 @@ const Description = ({}) => {
       </div>
 
       {/* THIRD */}
-      <div className="flex feature-wrapper-left h-[650px]">
-        <div className="py-18 lg:aspect-square flex flex-col justify-center">
-          <div className="feature-content-wrapper relative px-18">
-            <h2 className="text-[40px] tracking-[4px] leading-[48px] uppercase font-bold">
+      <div className="flex feature-wrapper-left md:h-[650px]">
+        <div className="py-8 md:px-18 lg:aspect-square flex flex-col justify-center">
+          <div className="feature-content-wrapper relative px-8 md:px-18">
+            <h2 className="text-[32px] md:text-[40px] tracking-[3.5px] leading-[48px] uppercase font-bold">
               Designed
               <br />
               For Everyone
@@ -92,7 +94,7 @@ const Description = ({}) => {
             </Link>
           </div>
         </div>
-        <div className="w-full h-full relative">
+        <div className="w-full h-[295px] md:h-full relative">
           <Image
             src={Videographer}
             fill

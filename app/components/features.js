@@ -27,13 +27,13 @@ const featureList = [
 
 const Features = ({}) => {
   return (
-    <section className="py-30">
-      <div className="grid grid-cols-3 gap-8 w-fit mx-auto">
+    <section className="px-8 py-30">
+      <div className="flex flex-col lg:grid lg:grid-cols-3 gap-12 lg:gap-8 w-fit mx-auto">
         {featureList.map((feature, idx) => {
           const featureImage = feature.image;
 
           return (
-            <div className="">
+            <div key={feature.feature} className="">
 
               <div className="w-18 h-18 flex items-center mx-auto">
                 <Image src={featureImage} />

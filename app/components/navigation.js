@@ -8,6 +8,10 @@ import { Cross as Hamburger } from "hamburger-react";
 
 const navLinks = [
   {
+    href: "/",
+    link: "Home",
+  },
+  {
     href: "/stories",
     link: "Stories",
   },
@@ -28,9 +32,9 @@ const Navigation = ({}) => {
   return (
     <nav className="px-6 md:px-10 py-4">
       <div className="max-w-[1170px] mx-auto flex justify-between items-center">
-        <div>
+        <Link href="/">
           <Image src={Logo} className="" alt="Photosnap Logo" />
-        </div>
+        </Link>
 
         {/* MENU LIST */}
         <ul className="hidden md:flex gap-9">

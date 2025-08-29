@@ -36,7 +36,7 @@ const Features = ({}) => {
             <div key={feature.feature} className="">
 
               <div className="w-18 h-18 flex items-center mx-auto">
-                <Image src={featureImage} />
+                <Image src={featureImage} alt={feature.image}/>
               </div>
 
               <div className="mt-12 text-center">

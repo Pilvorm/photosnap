@@ -9,8 +9,8 @@ const Description = ({}) => {
     <section className="">
       {/* First */}
       <div className="flex feature-wrapper-left md:h-[650px]">
-        <div className="max-md:relative py-8 md:px-18 lg:aspect-square bg-black flex flex-col justify-center text-white">
-          <div className="feature-content-wrapper md:relative px-8 md:px-18">
+        <div className="max-md:relative py-8 lg:aspect-square bg-black flex flex-col justify-center text-white">
+          <div className="feature-content-wrapper md:relative px-8 md:px-28">
 
             <div className="gradient-vertical absolute top-0 left-8 md:left-0"></div>
 

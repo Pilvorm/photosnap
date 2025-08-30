@@ -8,10 +8,9 @@ const Description = ({}) => {
   return (
     <section className="">
       {/* First */}
-      <div className="flex feature-wrapper-left md:h-[650px]">
-        <div className="max-md:relative py-8 lg:aspect-square bg-black flex flex-col justify-center text-white">
+      <div className="flex feature-wrapper-left md:min-h-[650px]">
+        <div className="max-md:relative py-16 lg:aspect-square bg-black flex flex-col justify-center text-white">
           <div className="feature-content-wrapper md:relative px-8 md:px-28">
-
             <div className="gradient-vertical absolute top-0 left-8 md:left-0"></div>
 
             <h2 className="text-[32px] md:text-[40px] tracking-[3.5px] leading-[48px] uppercase font-bold">
@@ -26,7 +25,10 @@ const Description = ({}) => {
               We make it easy to share photos, tell stories and connect with
               others.
             </p>
-            <Link href={""} className="tracking-[2px] text-xs uppercase font-bold">
+            <Link
+              href={""}
+              className="tracking-[2px] text-xs uppercase font-bold"
+            >
               Get an Invite
             </Link>
           </div>
@@ -43,7 +45,7 @@ const Description = ({}) => {
       </div>
 
       {/* SECOND */}
-      <div className="flex feature-wrapper-right md:h-[650px]">
+      <div className="flex feature-wrapper-right md:min-h-[650px]">
         <div className="w-full h-[295px] md:h-full relative">
           <Image
             src={Laptop}
@@ -53,7 +55,7 @@ const Description = ({}) => {
             alt="Designing application on a laptop"
           />
         </div>
-        <div className="py-8 md:px-18 lg:aspect-square flex flex-col justify-center">
+        <div className="py-16 md:px-18 lg:aspect-square flex flex-col justify-center">
           <div className="feature-content-wrapper relative px-8 md:px-18">
             <h2 className="text-[32px] md:text-[40px] tracking-[3.5px] leading-[48px] uppercase font-bold">
               Beautiful
@@ -67,7 +69,10 @@ const Description = ({}) => {
               Easily add photos, text, embed maps and media from other networks.
               Then share your story with everyone.
             </p>
-            <Link href={""} className="tracking-[2px] text-xs uppercase font-bold">
+            <Link
+              href={""}
+              className="tracking-[2px] text-xs uppercase font-bold"
+            >
               View the Stories
             </Link>
           </div>
@@ -75,8 +80,8 @@ const Description = ({}) => {
       </div>
 
       {/* THIRD */}
-      <div className="flex feature-wrapper-left md:h-[650px]">
-        <div className="py-8 md:px-18 lg:aspect-square flex flex-col justify-center">
+      <div className="flex feature-wrapper-left md:min-h-[650px]">
+        <div className="py-16 md:px-18 lg:aspect-square flex flex-col justify-center">
           <div className="feature-content-wrapper relative px-8 md:px-18">
             <h2 className="text-[32px] md:text-[40px] tracking-[3.5px] leading-[48px] uppercase font-bold">
               Designed
@@ -89,7 +94,10 @@ const Description = ({}) => {
               audience. Our tool is designed for photographers of all levels,
               brands, businesses you name it.
             </p>
-            <Link href={""} className="tracking-[2px] text-xs uppercase font-bold">
+            <Link
+              href={""}
+              className="tracking-[2px] text-xs uppercase font-bold"
+            >
               View the Stories
             </Link>
           </div>

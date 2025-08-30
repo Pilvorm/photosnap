@@ -39,12 +39,10 @@
 .link-hover {
   position: relative;
   text-decoration: none;
-  color: black;
   transition: 0.125s all ease-in-out;
 }
 
 .link-hover:hover {
-  color: black;
   transition: 0.125s all ease-in-out;
 }
 
@@ -112,6 +110,8 @@
   display: flex;
   flex-direction: column;
 }
+
+
 
 @media screen and (min-width: 768px) {
   .gradient-vertical {

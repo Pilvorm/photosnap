@@ -112,4 +112,23 @@
     display: grid;
     grid-template-columns: 8fr 4fr;
   }
+  .footer-logo {
+    grid-area: lg;
+  }
+  .footer-socials {
+    grid-area: sc;
+    margin-top: auto;
+  }
+  .footer-links {
+    grid-area: lk;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    margin-left: 112px;
+    text-align: left;
+  }
+  .footer-content-wrapper {
+    display: grid;
+    grid-template-areas: "lg lk" "sc lk";
+  }
 }/*# sourceMappingURL=style.css.map */

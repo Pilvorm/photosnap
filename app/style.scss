@@ -111,8 +111,6 @@
   flex-direction: column;
 }
 
-
-
 @media screen and (min-width: 768px) {
   .gradient-vertical {
     background: linear-gradient(to top, #ffc593 0%, #bc7198 52%, #5a77ff 100%);
@@ -137,5 +135,28 @@
   .feature-wrapper-right {
     display: grid;
     grid-template-columns: 8fr 4fr;
+  }
+
+  .footer-logo {
+    grid-area: lg;
+  }
+  .footer-socials {
+    grid-area: sc;
+    margin-top: auto;
+  }
+  .footer-links {
+    grid-area: lk;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    margin-left: 112px;
+    text-align: left;
+  }
+
+  .footer-content-wrapper {
+    display: grid;
+    grid-template-areas:
+      "lg lk"
+      "sc lk";
   }
 }

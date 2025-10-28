@@ -1,14 +1,22 @@
 import Link from "next/link";
 import Image from "next/image";
-import Appalachia from "@/public/assets/stories/desktop/moon-of-appalachia.jpg";
+import Stories from "../components/stories";
 
 export default function StoriesPage() {
   return (
-    <section className="">
+    <>
       {/* Hero */}
-      <div className="flex md:min-h-[650px] md:relative">
+      <section
+        className="flex min-h-[650px] md:relative"
+        style={{
+          backgroundImage: `url(assets/stories/desktop/moon-of-appalachia.jpg)`,
+          backgroundSize: "cover",
+          backgroundPosition: "70% center",
+          backgroundRepeat: "no-repeat"
+        }}
+      >
         <div className="flex flex-col justify-center text-white">
-          <div className="px-8 md:px-28">
+          <div className="px-10 md:px-28">
             <h2 className="text-[32px] md:text-[40px] tracking-[3.5px] leading-[48px] uppercase font-bold">
               Hazy Full
               <br />
@@ -30,16 +38,8 @@ export default function StoriesPage() {
             </Link>
           </div>
         </div>
-        <div className="w-full z-[-1]">
-          <Image
-            src={Appalachia}
-            fill
-            quality={100}
-            className="object-cover"
-            alt="Photographer on a dock"
-          />
-        </div>
-      </div>
-    </section>
+      </section>
+      <Stories />
+    </>
   );
 }

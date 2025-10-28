@@ -11,7 +11,7 @@ const Navigation = ({}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="px-6 md:px-10 py-4">
+    <nav className="px-6 md:px-10 py-4 bg-white">
       <div className="max-w-[1170px] mx-auto flex justify-between items-center">
         <Link href="/">
           <Image src={LogoBlack} className="" alt="Photosnap Logo" />

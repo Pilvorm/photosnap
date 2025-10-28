@@ -2,6 +2,8 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import "./style.css";
 
+import LenisWrapper from "./components/lenisWrapper";
+
 import Navigation from "./components/navigation";
 import Footer from "./components/footer";
 
@@ -18,9 +20,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${dmSans.className} antialiased`}>
-        <Navigation />
-        {children}
-        <Footer />
+        <LenisWrapper>
+          <Navigation />
+          {children}
+          <Footer />
+        </LenisWrapper>
       </body>
     </html>
   );

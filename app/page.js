@@ -1,5 +1,5 @@
 import Description from "./components/description";
-import Stories from "./components/stories";
+import HighlightedStories from "./components/highlightedStories";
 import Features from "./components/features";
 
 
@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <Description />
-      <Stories />
+      <HighlightedStories />
       <Features />
     </>
   );

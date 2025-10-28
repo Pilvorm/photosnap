@@ -11,6 +11,7 @@ const Description = ({}) => {
       <div className="flex feature-wrapper-left md:min-h-[650px]">
         <div className="max-md:relative py-16 lg:aspect-square bg-black flex flex-col justify-center text-white">
           <div className="feature-content-wrapper md:relative px-8 md:px-28">
+            
             <div className="gradient-vertical absolute top-0 left-8 md:left-0"></div>
 
             <h2 className="text-[32px] md:text-[40px] tracking-[3.5px] leading-[48px] uppercase font-bold">

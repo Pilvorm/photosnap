@@ -41,7 +41,7 @@ const Features = ({}) => {
 
               <div className="mt-12 text-center">
                 <h2 className="">{feature.feature}</h2>
-                <p className="mt-4 max-w-[350px] opacity-60 text-[15px] leading-[25px]">{feature.description}</p>
+                <p className="mt-4 max-w-[350px] opacity-75 text-[15px] leading-[25px]">{feature.description}</p>
               </div>
             </div>
           );

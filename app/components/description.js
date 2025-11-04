@@ -21,7 +21,7 @@ const Description = ({}) => {
               <br />
               Photo Stories.
             </h2>
-            <p className="mt-5 mb-12 opacity-60 text-[15px] leading-[25px]">
+            <p className="mt-5 mb-12 opacity-75 text-[15px] leading-[25px]">
               Photosnap is a platform for photographers and visual storytellers.
               We make it easy to share photos, tell stories and connect with
               others.
@@ -65,7 +65,7 @@ const Description = ({}) => {
               <br />
               Everytime
             </h2>
-            <p className="mt-5 mb-12 opacity-60 text-[15px] leading-[25px]">
+            <p className="mt-5 mb-12 opacity-75 text-[15px] leading-[25px]">
               We provide design templates to ensure your stories look terrific.
               Easily add photos, text, embed maps and media from other networks.
               Then share your story with everyone.
@@ -90,7 +90,7 @@ const Description = ({}) => {
               For Everyone
               <br />
             </h2>
-            <p className="mt-5 mb-12 opacity-60 text-[15px] leading-[25px]">
+            <p className="mt-5 mb-12 opacity-75 text-[15px] leading-[25px]">
               Photosnap can help you create stories that resonate with your
               audience. Our tool is designed for photographers of all levels,
               brands, businesses you name it.

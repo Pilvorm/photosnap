@@ -1,3 +1,10 @@
+import Responsive from "@/public/assets/features/desktop/responsive.svg";
+import Limit from "@/public/assets/features/desktop/no-limit.svg";
+import Embed from "@/public/assets/features/desktop/embed.svg";
+import Domain from "@/public/assets/features/desktop/custom-domain.svg";
+import Exposure from "@/public/assets/features/desktop/boost-exposure.svg";
+import DragDrop from "@/public/assets/features/desktop/drag-drop.svg";
+
 export const NAV_LINKS = [
   {
     href: "/",
@@ -8,8 +15,8 @@ export const NAV_LINKS = [
     link: "Stories",
   },
   {
-    href: "/feature",
-    link: "Feature",
+    href: "/features",
+    link: "Features",
   },
   {
     href: "/pricing",
@@ -113,6 +120,45 @@ export const STORIES_LIST = [
     title: "Land of Dreams",
     author: "William Malcolm",
     image: "land-of-dreams",
+  }
+];
+
+export const FEATURES_LIST = [
+  {
+    feature: "100% Responsive",
+    description:
+      "No matter which the device you’re on, our site is fully responsive and stories look beautiful on any screen.",
+    image: Responsive,
+  },
+  {
+    feature: "No Photo Upload Limit",
+    description:
+      "Our tool has no limits on uploads or bandwidth. Freely upload in bulk and share all of your stories in one go.",
+    image: Limit,
+  },
+  {
+    feature: "Available to Embed",
+    description:
+      "Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps, and more.",
+    image: Embed,
+  },
+  {
+    feature: "Custom Domain",
+    description:
+      "With Photosnap subscriptions you can host your stories on your own domain. You can also remove our branding!",
+    image: Domain,
+  },
+  {
+    feature: "Boost Your Exposure",
+    description:
+      "Users that viewed your story or gallery can easily get notifed of new and featured stories with our built in mailing list.",
+    image: Exposure,
+  },
+  {
+    feature: "Drag & Drop Image",
+    description:
+      "Easily drag and drop your image and get beautiful shots everytime. No over the top tooling to add friction to creating stories.",
+    image: DragDrop,
   }
 ];
 

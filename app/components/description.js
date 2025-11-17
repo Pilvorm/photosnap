@@ -28,7 +28,7 @@ const Description = ({}) => {
             </p>
             <Link
               href={""}
-              className="tracking-[2px] text-xs uppercase font-bold"
+              className="tracking-[2px] text-xs uppercase font-semibold"
             >
               Get an Invite
             </Link>
@@ -72,7 +72,7 @@ const Description = ({}) => {
             </p>
             <Link
               href={""}
-              className="tracking-[2px] text-xs uppercase font-bold"
+              className="tracking-[2px] text-xs uppercase font-semibold"
             >
               View the Stories
             </Link>
@@ -97,7 +97,7 @@ const Description = ({}) => {
             </p>
             <Link
               href={""}
-              className="tracking-[2px] text-xs uppercase font-bold"
+              className="tracking-[2px] text-xs uppercase font-semibold"
             >
               View the Stories
             </Link>

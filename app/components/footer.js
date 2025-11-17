@@ -42,7 +42,7 @@ const Footer = ({}) => {
       </div>
 
       <div className="flex flex-col gap-9 md:justify-between text-white text-center md:text-right">
-        <Link href={""} className="tracking-[2px] text-xs uppercase font-bold">
+        <Link href={""} className="tracking-[2px] text-xs uppercase font-semibold">
           Get an Invite
         </Link>
         <p className="opacity-50">Copyright 2025. All Rights Reserved</p>

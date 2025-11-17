@@ -34,7 +34,7 @@ export default function StoriesPage() {
             </p>
             <Link
               href={""}
-              className="tracking-[2px] text-xs uppercase font-bold"
+              className="tracking-[2px] text-xs uppercase font-semibold"
             >
               Read the Story
             </Link>

@@ -27,7 +27,7 @@ const plans = [
 const PricingCard = ({ cardType, isYearly, planName, planDesc, monthlyPrice }) => {
   return (
     <div
-      className={`price-card lg:max-w-[350px] min-h-[410px] px-10 md:max-lg:py-10 md:max-lg:h-min flex flex-col justify-center ${cardType == "standard" ? "h-9/10 bg-[#f5f5f5] my-auto text-black" : "relative bg-black text-white"}`}
+      className={`price-card lg:max-w-[350px] lg:min-h-[410px] px-10 py-10 md:max-lg:h-min flex flex-col justify-center ${cardType == "standard" ? "h-9/10 bg-[#f5f5f5] my-auto text-black" : "relative bg-black text-white"}`}
     >
       {cardType !== "standard" && (
         <div className="gradient-horizotal absolute top-0 left-0"></div>

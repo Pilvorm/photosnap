@@ -10,7 +10,7 @@ const Banner = ({}) => {
       }}
     >
       <div className="gradient-vertical absolute top-0 left-8 md:left-0"></div>
-      <div className="px-8 md:px-40 py-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <div className="px-8 md:px-10 py-16 lg:px-40 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
         <h2 className="text-[40px] leading-[48px] uppercase font-semibold">
           We're in Beta.
           <br />

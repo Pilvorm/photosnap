@@ -2,6 +2,7 @@ import Hero from "../components/hero";
 import Sunset from "@/public/assets/pricing/desktop/hero-alt.jpg";
 import Prices from "../components/prices";
 import ComparisonTable from "../components/comparisonTable";
+import Banner from "../components/banner";
 
 export default function Pricing() {
   return (
@@ -16,6 +17,7 @@ export default function Pricing() {
       />
       <Prices />
       <ComparisonTable />
+      <Banner />
     </>
   );
 }

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import ArrowLink from "./arrowLink";
 import LogoWhite from "@/public/assets/shared/desktop/logo-white.svg";
 import { FaFacebook, FaXTwitter } from "react-icons/fa6";
 import { FaYoutube, FaPinterest, FaInstagram } from "react-icons/fa";
@@ -42,9 +43,7 @@ const Footer = ({}) => {
       </div>
 
       <div className="flex flex-col gap-9 md:justify-between text-white text-center md:text-right">
-        <Link href={""} className="tracking-[2px] text-xs uppercase font-semibold">
-          Get an Invite
-        </Link>
+        <ArrowLink position={"end"} color={"white"} linkText={"Get an Invite"} url={""}/>
         <p className="opacity-50">Copyright 2025. All Rights Reserved</p>
       </div>
     </footer>

@@ -43,7 +43,8 @@ const plans = [
 
 const ComparisonTable = ({}) => {
   return (
-    <section className="mx-7">
+    <section className="mx-7 mb-16">
+      {/* Mobile */}
       <div className="md:hidden">
         <h2 className="text-xs tracking-[2px] uppercase font-bold">
           The Features
@@ -62,7 +63,23 @@ const ComparisonTable = ({}) => {
                   </p>
                   <span className="font-bold">
                     {" "}
-                    {plan.features[feature.key] ? "✓" : ""}
+                    {plan.features[feature.key] ? (
+                      <svg
+                        className="mt-2"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="15"
+                      >
+                        <path
+                          fill="none"
+                          stroke="#000"
+                          strokeWidth="2"
+                          d="M1 8.124L5.623 13 17 1"
+                        />
+                      </svg>
+                    ) : (
+                      ""
+                    )}
                   </span>
                 </div>
               ))}
@@ -72,6 +89,7 @@ const ComparisonTable = ({}) => {
         ))}
       </div>
 
+      {/* Tablet & Desktop */}
       <div className="hidden md:block overflow-x-auto lg:w-7/10 xl:w-5/10 mx-auto my-40">
         <h2 className="uppercase text-[40px] tracking-[4px] text-center font-bold">
           Compare
@@ -103,7 +121,23 @@ const ComparisonTable = ({}) => {
                     key={plan.name}
                     className="px-4 py-6 text-lg font-semibold text-center"
                   >
-                    {plan.features[feature.key] ? "✓" : ""}
+                    {plan.features[feature.key] ? (
+                      <svg
+                        className="mx-auto"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="15"
+                      >
+                        <path
+                          fill="none"
+                          stroke="#000"
+                          strokeWidth="2"
+                          d="M1 8.124L5.623 13 17 1"
+                        />
+                      </svg>
+                    ) : (
+                      ""
+                    )}
                   </td>
                 ))}
               </tr>

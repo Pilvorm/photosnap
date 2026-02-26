@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ArrowLink from "./arrowLink";
 import Image from "next/image";
 
 const Hero = ({ title, description, linkText, url, heroImg, imgAlt }) => {
@@ -15,12 +16,7 @@ const Hero = ({ title, description, linkText, url, heroImg, imgAlt }) => {
             {description}
           </p>
           {linkText && (
-            <Link
-              href={url}
-              className="tracking-[2px] text-xs uppercase font-semibold"
-            >
-              {linkText}
-            </Link>
+            <ArrowLink color={"white"} animated={true} linkText={linkText} url={url}/>
           )}
         </div>
       </div>

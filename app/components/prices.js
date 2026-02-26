@@ -2,27 +2,7 @@
 
 import { useState } from "react";
 import SwitchButton from "./switch";
-
-const plans = [
-  {
-    cardType: "standard",
-    planName: "Basic",
-    planDesc: "Includes basic usage of our platform. Recommended for new and aspiring photographers.",
-    monthlyPrice: 19,
-  },
-  {
-    cardType: "recommended",
-    planName: "Pro",
-    planDesc: "More advanced features available. Recommended for photography veterans and professionals.",
-    monthlyPrice: 39,
-  },
-  {
-    cardType: "standard",
-    planName: "Business",
-    planDesc: "Additional features available such as more detailed metrics. Recommended for business owners.",
-    monthlyPrice: 99,
-  },
-];
+import { PLANS } from "../data";
 
 const PricingCard = ({ cardType, isYearly, planName, planDesc, monthlyPrice }) => {
   return (
@@ -48,7 +28,7 @@ const PricingCard = ({ cardType, isYearly, planName, planDesc, monthlyPrice }) =
       </div>
 
       <button
-        className={`cursor-pointer mt-10 w-full md:max-lg:w-[45%] h-10 tracking-[2px] uppercase text-xs font-semibold ${cardType == "standard" ? "standardBtn" : "recommendedBtn"}`}
+        className={`cursor-pointer mt-10 w-full md:max-lg:w-[45%] h-10 tracking-[2px] uppercase text-xs font-semibold ${cardType == "standard" ? "standard-btn" : "recommended-btn"}`}
       >
         Pick Plan
       </button>
@@ -72,7 +52,7 @@ const Prices = ({}) => {
       </div>
 
       <div className="mt-12 w-fit flex flex-col lg:grid grid-cols-3 min-h-[470px] gap-7 mx-auto">
-        {plans.map((plan, idx) => (
+        {PLANS.map((plan, idx) => (
           <PricingCard
             key={plan.planName}
             isYearly={isYearly}

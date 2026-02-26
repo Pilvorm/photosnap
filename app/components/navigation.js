@@ -37,7 +37,7 @@ const Navigation = ({}) => {
 
         <Link
           href={""}
-          className="px-6 py-3 hidden md:block text-white bg-black text-xs uppercase font-semibold tracking-[2px]"
+          className="standard-btn px-6 py-3 hidden md:block text-white bg-black text-xs uppercase font-semibold tracking-[2px]"
         >
           Get an Invite
         </Link>

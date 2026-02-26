@@ -162,4 +162,25 @@ export const FEATURES_LIST = [
   }
 ];
 
+export const PLANS = [
+  {
+    cardType: "standard",
+    planName: "Basic",
+    planDesc: "Includes basic usage of our platform. Recommended for new and aspiring photographers.",
+    monthlyPrice: 19,
+  },
+  {
+    cardType: "recommended",
+    planName: "Pro",
+    planDesc: "More advanced features available. Recommended for photography veterans and professionals.",
+    monthlyPrice: 39,
+  },
+  {
+    cardType: "standard",
+    planName: "Business",
+    planDesc: "Additional features available such as more detailed metrics. Recommended for business owners.",
+    monthlyPrice: 99,
+  },
+];
+
 

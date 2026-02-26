@@ -1,4 +1,4 @@
-import Link from "next/link";
+import ArrowLink from "./arrowLink";
 
 const Banner = ({}) => {
   return (
@@ -18,12 +18,7 @@ const Banner = ({}) => {
           <br />
           Today!
         </h2>
-        <Link
-          href={""}
-          className="tracking-[2px] text-xs uppercase font-semibold"
-        >
-          Get an Invite
-        </Link>
+        <ArrowLink position={"end"} color={"white"} linkText={"Get an Invite"} url={""}/>
       </div>
     </section>
   );

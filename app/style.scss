@@ -17,26 +17,7 @@ $blue: #5a77ff;
   background-clip: content-box;
 }
 
-// ::selection {
-//   color: $blue-main;
-//   background: $blue-accent;
-// }
-
-// ::-moz-selection {
-//   color: $blue-main;
-//   background: $blue-accent;
-// }
-
-// .split * {
-//   will-change: transform;
-// }
-
-// body {
-//   background-color: $blue-main;
-//   color: $blue-accent;
-// }
-
-.hamburger-react div {
+.hamburger-react div:first-child {
   height: 1.5px !important;
 }
 
@@ -150,11 +131,11 @@ $blue: #5a77ff;
   }
 }
 
-.standardBtn {
+.standard-btn {
   background-color: black;
   color: white;
   transition: all 0.125s ease-out;
-  
+
   &:hover {
     background-color: #dfdfdf;
     color: black;
@@ -162,7 +143,7 @@ $blue: #5a77ff;
   }
 }
 
-.recommendedBtn {
+.recommended-btn {
   background: linear-gradient(
     10deg,
     white 0%,
@@ -175,11 +156,44 @@ $blue: #5a77ff;
   background-size: 200% 400%; // make it taller for vertical movement
   background-position: bottom; // start hidden
   color: black;
-  transition: background-position 0.3s ease-out, color 0.125s ease-out;
+  transition:
+    background-position 0.3s ease-out,
+    color 0.125s ease-out;
 
   &:hover {
     background-position: top; // reveal gradient
     color: black;
+  }
+}
+
+.link {
+  .link-arrow {
+    display: flex;
+    align-items: center;
+
+    .arrow-shaft {
+      transform-origin: left center;
+      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .arrow-point {
+      margin-left: -5.75px;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+}
+
+.link.animated {
+  &:hover {
+    .arrow-shaft {
+      transform: scaleX(1.5);
+      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .arrow-point {
+      transform: translateX(20px);
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
   }
 }
 

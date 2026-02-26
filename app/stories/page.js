@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import ArrowLink from "../components/arrowLink";
 import Stories from "../components/stories";
 
 export default function StoriesPage() {
@@ -32,12 +32,7 @@ export default function StoriesPage() {
               in eastern Kentucky and West Virginia, and while the ridges are
               not high, the terrain is extremely rugged.
             </p>
-            <Link
-              href={""}
-              className="tracking-[2px] text-xs uppercase font-semibold"
-            >
-              Read the Story
-            </Link>
+            <ArrowLink color={"white"} linkText={"Read the Story"} url={""}/>
           </div>
         </div>
         <div className="w-full h-[295px] md:h-full relative"></div>

@@ -13,7 +13,7 @@
   background-clip: content-box;
 }
 
-.hamburger-react div {
+.hamburger-react div:first-child {
   height: 1.5px !important;
 }
 
@@ -120,27 +120,49 @@
   background: black;
 }
 
-.standardBtn {
+.standard-btn {
   background-color: black;
   color: white;
   transition: all 0.125s ease-out;
 }
-.standardBtn:hover {
+.standard-btn:hover {
   background-color: #dfdfdf;
   color: black;
   transition: all 0.125s ease-out;
 }
 
-.recommendedBtn {
+.recommended-btn {
   background: linear-gradient(10deg, white 0%, white 45%, #ffc593 47%, #bc7198 70%, #5a77ff 100%);
   background-size: 200% 400%;
   background-position: bottom;
   color: black;
   transition: background-position 0.3s ease-out, color 0.125s ease-out;
 }
-.recommendedBtn:hover {
+.recommended-btn:hover {
   background-position: top;
   color: black;
+}
+
+.link .link-arrow {
+  display: flex;
+  align-items: center;
+}
+.link .link-arrow .arrow-shaft {
+  transform-origin: left center;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.link .link-arrow .arrow-point {
+  margin-left: -5.75px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link.animated:hover .arrow-shaft {
+  transform: scaleX(1.5);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.link.animated:hover .arrow-point {
+  transform: translateX(20px);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media screen and (min-width: 768px) {

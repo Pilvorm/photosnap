@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import ArrowLink from "./arrowLink";
 import Laptop from "@/public/assets/home/desktop/beautiful-stories.jpg";
 import Videographer from "@/public/assets/home/desktop/designed-for-everyone.jpg";
 
@@ -31,12 +32,7 @@ const Description = ({}) => {
               Easily add photos, text, embed maps and media from other networks.
               Then share your story with everyone.
             </p>
-            <Link
-              href={""}
-              className="tracking-[2px] text-xs uppercase font-semibold"
-            >
-              View the Stories
-            </Link>
+            <ArrowLink color={"black"} linkText={"View the Stories"} url={""}/>
           </div>
         </div>
       </div>
@@ -56,12 +52,7 @@ const Description = ({}) => {
               audience. Our tool is designed for photographers of all levels,
               brands, businesses you name it.
             </p>
-            <Link
-              href={""}
-              className="tracking-[2px] text-xs uppercase font-semibold"
-            >
-              View the Stories
-            </Link>
+            <ArrowLink color={"black"} linkText={"View the Stories"} url={""}/>
           </div>
         </div>
         <div className="w-full h-[295px] md:h-full relative">

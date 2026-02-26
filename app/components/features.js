@@ -28,7 +28,6 @@ const Features = ({ display = 6 }) => {
           })}
         </div>
       </section>
-      <Banner />
     </>
   );
 };

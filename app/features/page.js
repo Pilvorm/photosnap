@@ -1,6 +1,7 @@
 import Hero from "../components/hero";
 import Camera from "@/public/assets/features/desktop/hero-alt.jpg";
 import Features from "../components/features";
+import Banner from "../components/banner";
 
 export default function StoriesPage() {
   return (
@@ -13,6 +14,7 @@ export default function StoriesPage() {
         imgAlt={"Close-up of a person standing outdoors at sunset, holding a DSLR camera at their side"}
       />
       <Features />
+      <Banner />
     </>
   );
 }

@@ -6,21 +6,28 @@ import Image from "next/image";
 import LogoBlack from "@/public/assets/shared/desktop/logo.svg";
 import { Cross as Hamburger } from "hamburger-react";
 import { NAV_LINKS } from "../data";
+import { AnimatePresence, motion } from "motion/react";
 
 const Navigation = ({}) => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const visibilityAnimation = {
+    initial: { opacity: 0, translateY: "-10px" },
+    animate: { opacity: 1, translateY: "0px" },
+    exit: { opacity: 0, translateY: "-10px" },
+  };
+
   return (
-    <nav className="px-6 md:px-10 py-4 bg-white">
-      <div className="max-w-[1170px] mx-auto flex justify-between items-center">
+    <nav className="relative">
+      <div className="relative max-w-[1170px] px-6 md:px-10 py-4 mx-auto bg-white flex justify-between items-center z-50">
         <Link href="/">
           <Image src={LogoBlack} className="" alt="Photosnap Logo" />
         </Link>
 
         {/* MENU LIST */}
         <ul className="hidden md:flex gap-9">
-          {NAV_LINKS.map((nav, idx) => {
-            return (
+          {NAV_LINKS.map(
+            (nav, idx) =>
               nav.link !== "Home" && (
                 <li key={nav.link} className="">
                   <Link
@@ -31,8 +38,7 @@ const Navigation = ({}) => {
                   </Link>
                 </li>
               )
-            );
-          })}
+          )}
         </ul>
 
         <Link
@@ -53,6 +59,60 @@ const Navigation = ({}) => {
           />
         </button>
       </div>
+
+      <AnimatePresence>
+        {isOpen && (
+          <>
+            {/* OVERLAY */}
+            <motion.div
+              className="fixed inset-0 bg-black/50 z-40"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              onClick={() => setIsOpen(false)}
+            />
+
+            {/* MENU PANEL */}
+            <motion.div
+              className="fixed top-[80px] left-0 w-full bg-white p-8 z-50 md:hidden"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.25 }}
+            >
+              <ul className="gap-3 flex flex-col items-center">
+                {NAV_LINKS.map(
+                  (nav, idx) =>
+                    nav.link !== "Home" && (
+                      <motion.li
+                        key={nav.link}
+                        initial={{ y:-10, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        exit={{ y:-10, opacity: 0 }}
+                        transition={{ delay: (idx + 1) / 30 }}
+                      >
+                        <Link
+                          href={nav.href}
+                          onClick={() => setIsOpen(false)}
+                          className="text-center text-sm uppercase font-bold tracking-[2px]"
+                        >
+                          {nav.link}
+                        </Link>
+                      </motion.li>
+                    )
+                )}
+              </ul>
+
+              <hr className="my-3 text-[#dfdfdf]" />
+
+              <button className="standard-btn w-full h-12 text-sm">
+                Get an Invite
+              </button>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };

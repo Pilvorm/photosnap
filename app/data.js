@@ -120,7 +120,7 @@ export const STORIES_LIST = [
     title: "Land of Dreams",
     author: "William Malcolm",
     image: "land-of-dreams",
-  }
+  },
 ];
 
 export const FEATURES_LIST = [
@@ -159,28 +159,60 @@ export const FEATURES_LIST = [
     description:
       "Easily drag and drop your image and get beautiful shots everytime. No over the top tooling to add friction to creating stories.",
     image: DragDrop,
-  }
+  },
 ];
 
 export const PLANS = [
   {
     cardType: "standard",
     planName: "Basic",
-    planDesc: "Includes basic usage of our platform. Recommended for new and aspiring photographers.",
+    planDesc:
+      "Includes basic usage of our platform. Recommended for new and aspiring photographers.",
     monthlyPrice: 19,
+    features: {
+      unlimitedStoryPosting: true,
+      unlimitedPhotoUpload: true,
+    },
   },
   {
     cardType: "recommended",
     planName: "Pro",
-    planDesc: "More advanced features available. Recommended for photography veterans and professionals.",
+    planDesc:
+      "More advanced features available. Recommended for photography veterans and professionals.",
     monthlyPrice: 39,
+    features: {
+      unlimitedStoryPosting: true,
+      unlimitedPhotoUpload: true,
+      embeddingCustomContent: true,
+      customizeMetadata: true,
+    },
   },
   {
     cardType: "standard",
     planName: "Business",
-    planDesc: "Additional features available such as more detailed metrics. Recommended for business owners.",
+    planDesc:
+      "Additional features available such as more detailed metrics. Recommended for business owners.",
     monthlyPrice: 99,
+    features: {
+      unlimitedStoryPosting: true,
+      unlimitedPhotoUpload: true,
+      embeddingCustomContent: true,
+      customizeMetadata: true,
+      advancedMetrics: true,
+      photoDownloads: true,
+      searchEngineIndexing: true,
+      customAnalytics: true,
+    },
   },
 ];
 
-
+export const PLAN_FEATURES = [
+  { name: "Unlimited Story Posting", key: "unlimitedStoryPosting" },
+  { name: "Unlimited Photo Upload", key: "unlimitedPhotoUpload" },
+  { name: "Embedding Custom Content", key: "embeddingCustomContent" },
+  { name: "Customize Metadata", key: "customizeMetadata" },
+  { name: "Advanced Metrics", key: "advancedMetrics" },
+  { name: "Photo Downloads", key: "photoDownloads" },
+  { name: "Search Engine Indexing", key: "searchEngineIndexing" },
+  { name: "Custom Analytics", key: "customAnalytics" },
+];

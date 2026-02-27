@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { STORIES_LIST } from "../data";
 import StoryCard from "./storyCard";
 

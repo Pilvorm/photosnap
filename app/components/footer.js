@@ -12,17 +12,26 @@ const Footer = ({}) => {
   return (
     <footer className="px-8 py-14 md:px-10 lg:px-42 bg-black flex flex-col md:flex-row md:justify-between gap-30">
       <div className="footer-content-wrapper flex flex-col items-center md:items-start">
-
         <Link href="/" className="footer-logo md:order-1">
           <Image src={LogoWhite} className="" alt="Photosnap Logo" />
         </Link>
 
         <div className="footer-socials md:order-3 socials-wrapper mt-8 md:mt-18 gap-4 flex text-white">
-          <FaFacebook size={20} />
-          <FaYoutube size={20} />
-          <FaXTwitter size={20} />
-          <FaPinterest size={20} />
-          <FaInstagram size={20} />
+          <Link href="">
+            <FaFacebook size={20} />
+          </Link>
+          <Link href="">
+            <FaYoutube size={20} />
+          </Link>
+          <Link href="">
+            <FaXTwitter size={20} />
+          </Link>
+          <Link href="">
+            <FaPinterest size={20} />
+          </Link>
+          <Link href="">
+            <FaInstagram size={20} />
+          </Link>
         </div>
 
         {/* MENU LIST */}
@@ -42,9 +51,16 @@ const Footer = ({}) => {
         </ul>
       </div>
 
-      <div className="flex flex-col gap-9 md:justify-between text-white text-center md:text-right">
-        <ArrowLink position={"end"} color={"white"} linkText={"Get an Invite"} url={""}/>
-        <p className="opacity-50">Copyright 2025. All Rights Reserved</p>
+      <div className="flex flex-col gap-9 max-md:items-center md:justify-between text-white text-center md:text-right">
+        <ArrowLink
+          position={"end"}
+          color={"white"}
+          linkText={"Get an Invite"}
+          url={""}
+        />
+        <p className="opacity-50">
+          Copyright {new Date().getFullYear()}. All Rights Reserved
+        </p>
       </div>
     </footer>
   );

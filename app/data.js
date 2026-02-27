@@ -165,8 +165,8 @@ export const FEATURES_LIST = [
 export const PLANS = [
   {
     cardType: "standard",
-    planName: "Basic",
-    planDesc:
+    name: "Basic",
+    description:
       "Includes basic usage of our platform. Recommended for new and aspiring photographers.",
     monthlyPrice: 19,
     features: {
@@ -176,8 +176,8 @@ export const PLANS = [
   },
   {
     cardType: "recommended",
-    planName: "Pro",
-    planDesc:
+    name: "Pro",
+    description:
       "More advanced features available. Recommended for photography veterans and professionals.",
     monthlyPrice: 39,
     features: {
@@ -189,8 +189,8 @@ export const PLANS = [
   },
   {
     cardType: "standard",
-    planName: "Business",
-    planDesc:
+    name: "Business",
+    description:
       "Additional features available such as more detailed metrics. Recommended for business owners.",
     monthlyPrice: 99,
     features: {

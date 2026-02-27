@@ -10,7 +10,7 @@ import { NAV_LINKS } from "../data";
 
 const Footer = ({}) => {
   return (
-    <footer className="px-8 py-14 md:px-10 lg:px-42 bg-black flex flex-col md:flex-row md:justify-between gap-30">
+    <footer className="relative px-8 py-14 md:px-10 lg:px-42 bg-black flex flex-col md:flex-row md:justify-between gap-30 z-10">
       <div className="footer-content-wrapper flex flex-col items-center md:items-start">
         <Link href="/" className="footer-logo md:order-1">
           <Image src={LogoWhite} className="" alt="Photosnap Logo" />

@@ -54,11 +54,11 @@ const Prices = ({}) => {
       <div className="mt-12 w-fit flex flex-col lg:grid grid-cols-3 min-h-[470px] gap-7 mx-auto">
         {PLANS.map((plan, idx) => (
           <PricingCard
-            key={plan.planName}
+            key={plan.name}
             isYearly={isYearly}
             cardType={plan.cardType}
-            planName={plan.planName}
-            planDesc={plan.planDesc}
+            planName={plan.name}
+            planDesc={plan.description}
             monthlyPrice={getPrice(plan.monthlyPrice)}
           />
         ))}

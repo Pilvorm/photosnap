@@ -6,7 +6,7 @@ const Stories = ({display}) => {
   const stories = display ? STORIES_LIST.slice(0, display) : STORIES_LIST;
 
   return (
-    <section className="w-full grid md:grid-cols-2 lg:grid-cols-4">
+    <section className="w-full grid md:grid-cols-2 lg:grid-cols-4 bg-black">
       {/* First */}
       {stories.map((story, idx) => (
         <StoryCard

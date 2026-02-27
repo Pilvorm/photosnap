@@ -104,7 +104,7 @@ const Navigation = ({}) => {
                 )}
               </ul>
 
-              <hr className="my-3 text-[#dfdfdf]" />
+              <hr className="my-5 text-[#dfdfdf]" />
 
               <button className="standard-btn w-full h-12 text-sm">
                 Get an Invite

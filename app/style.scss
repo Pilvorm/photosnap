@@ -226,7 +226,7 @@ $blue: #5a77ff;
     transition: transform 0.25s cubic-bezier(0.25, 0.85, 0.3, 1);
   }
   .story-wrapper:hover {
-    z-index: 99;
+    z-index: 2;
     transform: translateY(-24px);
   }
 }

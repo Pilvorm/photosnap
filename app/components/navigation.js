@@ -1,24 +1,58 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import LogoBlack from "@/public/assets/shared/desktop/logo.svg";
 import { Cross as Hamburger } from "hamburger-react";
 import { NAV_LINKS } from "../data";
-import { AnimatePresence, motion } from "motion/react";
+import {
+  AnimatePresence,
+  motion,
+  useScroll,
+  useMotionValueEvent,
+} from "motion/react";
 
 const Navigation = ({}) => {
   const [isOpen, setIsOpen] = useState(false);
+  const { scrollY } = useScroll();
+  const [hidden, setHidden] = useState(false);
 
-  const visibilityAnimation = {
-    initial: { opacity: 0, translateY: "-10px" },
-    animate: { opacity: 1, translateY: "0px" },
-    exit: { opacity: 0, translateY: "-10px" },
-  };
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious();
+    if (!previous) return;
+
+    if (isOpen) {
+      setHidden(false);
+      return;
+    }
+
+    if (latest > previous && latest > 100) {
+      setHidden(true);
+    } else {
+      setHidden(false);
+    }
+  });
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
   return (
-    <nav className="relative">
+    <motion.nav
+      initial={false}
+      animate={{ y: hidden ? "-100%" : "0%" }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
+      className="relative sticky top-0 z-100 bg-white shadow-2xs"
+    >
       <div className="relative max-w-[1170px] px-6 md:px-10 py-4 mx-auto bg-white flex justify-between items-center z-50">
         <Link href="/">
           <Image src={LogoBlack} className="" alt="Photosnap Logo" />
@@ -37,7 +71,7 @@ const Navigation = ({}) => {
                     {nav.link}
                   </Link>
                 </li>
-              )
+              ),
           )}
         </ul>
 
@@ -49,7 +83,7 @@ const Navigation = ({}) => {
         </Link>
 
         {/* BURGER */}
-        <button className={`md:hidden z-[10000]`}>
+        <button className={`md:hidden`}>
           <Hamburger
             toggled={isOpen}
             size={20}
@@ -65,7 +99,7 @@ const Navigation = ({}) => {
           <>
             {/* OVERLAY */}
             <motion.div
-              className="fixed inset-0 bg-black/50 z-40"
+              className="md:hidden fixed inset-0 bg-black/50 z-40"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -87,10 +121,13 @@ const Navigation = ({}) => {
                     nav.link !== "Home" && (
                       <motion.li
                         key={nav.link}
-                        initial={{ y:-10, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        exit={{ y:-10, opacity: 0 }}
-                        transition={{ delay: (idx + 1) / 30 }}
+                        initial={{ y: -10, opacity: 0 }}
+                        animate={{
+                          y: 0,
+                          opacity: 1,
+                          transition: { delay: (idx + 1) / 30 },
+                        }}
+                        exit={{ y: -10, opacity: 0 }}
                       >
                         <Link
                           href={nav.href}
@@ -100,7 +137,7 @@ const Navigation = ({}) => {
                           {nav.link}
                         </Link>
                       </motion.li>
-                    )
+                    ),
                 )}
               </ul>
 
@@ -113,7 +150,7 @@ const Navigation = ({}) => {
           </>
         )}
       </AnimatePresence>
-    </nav>
+    </motion.nav>
   );
 };
 

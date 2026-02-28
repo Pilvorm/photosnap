@@ -1,12 +1,12 @@
 import { STORIES_LIST } from "../data";
 import StoryCard from "./storyCard";
 
-const Stories = ({display}) => {
+const Stories = ({display, blackBackground}) => {
 
   const stories = display ? STORIES_LIST.slice(0, display) : STORIES_LIST;
 
   return (
-    <section className="w-full grid md:grid-cols-2 lg:grid-cols-4 bg-black">
+    <section className={`w-full grid md:grid-cols-2 lg:grid-cols-4 bg-${blackBackground ? "black" : "white"}`}>
       {/* First */}
       {stories.map((story, idx) => (
         <StoryCard

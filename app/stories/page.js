@@ -1,4 +1,5 @@
-import Link from "next/link";
+import Image from "next/image";
+import Appalacia from "@/public/assets/stories/tablet/moon-of-appalacia.jpg";
 import ArrowLink from "../components/arrowLink";
 import Stories from "../components/stories";
 
@@ -17,7 +18,9 @@ export default function StoriesPage() {
       >
         <div className="max-md:relative py-16 lg:aspect-square bg-black md:bg-transparent flex flex-col justify-center text-white">
           <div className="feature-content-wrapper md:relative px-8 md:px-28">
-            <div className="tracking-[2px] text-xs uppercase font-bold">Last Month's Featured Story</div>
+            <div className="tracking-[2px] text-xs uppercase font-bold">
+              Last Month's Featured Story
+            </div>
             <h2 className="mt-6 text-[32px] md:text-[40px] tracking-[3.5px] leading-[48px] uppercase font-bold">
               Hazy Full
               <br />
@@ -25,17 +28,28 @@ export default function StoriesPage() {
               <br />
               Appalachia
             </h2>
-            <div className="mt-6 text-white/75 text-[15px] leading-[25px] font-light">March 2nd 2020 <span className="text-white/100">by John Appleseed</span></div>
+            <div className="mt-6 text-white/75 text-[15px] leading-[25px] font-light">
+              March 2nd 2020{" "}
+              <span className="text-white/100">by John Appleseed</span>
+            </div>
             <p className="mt-5 mb-12 text-white/75 text-[15px] leading-[25px] font-light">
               The dissected plateau area, while not actually made up of
               geological mountains, is popularly called "mountains," especially
               in eastern Kentucky and West Virginia, and while the ridges are
               not high, the terrain is extremely rugged.
             </p>
-            <ArrowLink color={"white"} linkText={"Read the Story"} url={""}/>
+            <ArrowLink color={"white"} linkText={"Read the Story"} url={""} />
           </div>
         </div>
-        <div className="w-full h-[295px] md:h-full relative"></div>
+        <div className="w-full h-[295px] md:h-full relative">
+          <Image
+            src={Appalacia}
+            fill
+            quality={100}
+            className="object-cover object-top md:hidden"
+            alt={"Moon of Appalacia"}
+          />
+        </div>
       </section>
 
       <Stories />

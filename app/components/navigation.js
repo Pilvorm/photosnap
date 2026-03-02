@@ -83,7 +83,7 @@ const Navigation = ({}) => {
         </Link>
 
         {/* BURGER */}
-        <button className={`md:hidden`}>
+        <button className={`md:hidden`} aria-label="Navigation menu">
           <Hamburger
             toggled={isOpen}
             size={20}

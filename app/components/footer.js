@@ -17,19 +17,19 @@ const Footer = ({}) => {
         </Link>
 
         <div className="footer-socials md:order-3 socials-wrapper mt-8 md:mt-18 gap-4 flex text-white">
-          <Link href="">
+          <Link href="https://www.facebook.com/?locale=id_ID">
             <FaFacebook size={20} />
           </Link>
-          <Link href="">
+          <Link href="https://www.youtube.com/">
             <FaYoutube size={20} />
           </Link>
-          <Link href="">
+          <Link href="https://x.com/">
             <FaXTwitter size={20} />
           </Link>
-          <Link href="">
+          <Link href="https://www.pinterest.com/">
             <FaPinterest size={20} />
           </Link>
-          <Link href="">
+          <Link href="https://www.instagram.com/">
             <FaInstagram size={20} />
           </Link>
         </div>

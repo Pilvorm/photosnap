@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
       <body className={`${dmSans.className} antialiased`}>
         <LenisWrapper>
           <Navigation />
-          {children}
+          <main>{children}</main>
           <Footer />
         </LenisWrapper>
       </body>
